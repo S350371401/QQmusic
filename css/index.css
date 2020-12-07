@@ -110,13 +110,14 @@
 /*以下是歌曲推荐部分*/
 .song-rec{
   height: 550px;
-  background:#f4f4f4;
+  background-image:linear-gradient(#f2f2f2 25%,#fafafa 75%);
 }
 .song-rec h2 {
   height: 30px;
   text-align: center;
   padding-top: 60px;
   font-size: 30px;
+  letter-spacing: 10px;
 }
 .song-rec-menu {
   display: flex;
@@ -169,15 +170,173 @@
 .song-rec-point div:hover {
   background: #999999;
 }
-
+/* 以下是新歌推荐版块 */
 .new-song {
-  height: 556px;
-  background: #8f5b5b;
+  height: 600px;
+  background-image:linear-gradient(#f2f2f2 25%,#fafafa 75%);
+}
+.new-song h2 {
+  height: 30px;
+  text-align: center;
+  padding-top: 60px;
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: 10px;
+}
+.new-song-menu {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  margin-top: 30px;
+}
+.new-song-btn {
+  height: 36px;
+  width: 120px;
+  font-size: 14px;
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+.new-song-btn:hover {
+  background: #dadada;
+}
+.new-song-btn img {
+  height: 22px;
+  width: 18px;
+  margin-right: 5px;
+}
+.new-song-btn p {
+  margin-right: 10px;
+}
+.new-song-menu ul {
+  display: flex;
+  padding: 0;
+  margin-left: 250px;
+}
+.new-song-menu li{
+  margin:0 50px 0 0;
+}
+.new-song-menu li:hover {
+  color: #3ac17e;
+}
+.new-song-menu .active {
+  color: #3ac17e;
+}
+.new-song-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 40px;
+}
+.new-song-details li {
+  width: 360px;
+  height: 100px;
+  display: flex;
+  border-bottom: 1px #c9c9c9c9 solid;
+  padding-top: 20px;
+  margin: 0 35px 0 0;
+}
+.new-song-details .active {
+  border: none;
+}
+.new-song-details img {
+  width: 90px;
+  height: 90px;
+}
+.new-song-details div {
+  width: 280px;
+  height: 100px;   
+}
+.new-song-details h3 {
+  float: left;
+  font-weight: normal;
+  font-size: 14px;
+  padding: 25px 0 0 15px;
+  margin: 0;
+}
+.new-song-details .time {
+  float: right;
+  padding: 30px 0 0 0;
+  color: #777777;
+}
+.new-song-details h4 {
+  padding: 35px 0 0 15px;
+  left: 0;
+  font-weight: normal;
+  font-size: 14px;
+  color: #777777;
+}
+.new-song-point {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+.new-song-point li {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #c9c9c9;
+  margin-right: 25px;
+  cursor: pointer;
+}
+.new-song-point .active {
+  background: #999999;
+}
+.new-song-point li:hover {
+  background: #999999;
 }
 
 .wonderful {
   height: 420px;
-  background: #dada5f;
+  background-image:linear-gradient(#f2f2f2 25%,#fafafa 75%);
+}
+.wonderful h2 {
+  margin: 0;
+  text-align: center;
+  padding: 50px 0 30px 0;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+.wonderful .image {
+  display: flex;
+  justify-content: center;
+}
+.wonderful .image1 {
+  width: 580px;
+  height: 230px;
+  background-image: url("../img/shaonv.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-right: 30px;
+}
+.wonderful .image2 {
+  width: 580px;
+  height: 230px;
+  background-image: url("../img/lvchang.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.wonderful-point {
+  display: flex;
+  justify-content: center;
+}
+.wonderful-point li {
+  background: #c9c9c9;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.wonderful-point li:hover {
+  background: #999999;
+}
+.wonderful-point .active {
+  background: #999999;
 }
 
 .new-disc {
