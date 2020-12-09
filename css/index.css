@@ -1,3 +1,37 @@
+/* 绝对定位的不知道啥玩意儿 */
+.position {
+  width: 180px;
+  height: 134px;
+  position: fixed;
+  background-color: white;
+  border-radius: 10px;
+  margin: 180px 0 0 1100px;
+}
+.position img {
+  width: 110px;
+  height: 38px;
+  margin-left: 30px;
+  padding-top: 10px;
+}
+.position p {
+  font-size: 16px;
+  color:#888888;
+  text-align: center;
+  margin: 0;
+  padding: 8px 0 15px 0;
+}
+.position .downlaod {
+  width: 100px;
+  height: 28px;
+  background: #3ac17e;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 16px;
+  margin-left: 35px;
+}
+/* 头部 */
 .head {
   height: 150px;
   
@@ -90,7 +124,7 @@
   border: 1px #c9c9c9 solid;
   display: block;
 }
-
+/* 头部列表 */
 .head-list {
   height: 30px;
   display: flex;
@@ -134,12 +168,46 @@
   justify-content: center;
   align-items: center;
 }
-
+.song-rec-details-div {
+  margin: 10px 20px 0 10px;
+}
+.song-rec-imgbox {
+  width:220px;
+  height: 220PX;
+  overflow: hidden; 
+}
+.song-rec-shade {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  background: rgba(99,99,99,.25);
+  display: none;
+}
+.song-rec-imgbox:hover .song-rec-shade{
+  display: block;
+  z-index: 10;
+}
+.song-rec-shade .icon-bofang {
+  font-size: 52px;
+  position: absolute;
+  color: white;
+  padding: 85px;
+  display: none; 
+  transition: .5s;
+}
+.song-rec-imgbox:hover .icon-bofang {
+  display: block;
+  z-index: 10;
+}
+.song-rec-imgbox:hover .song-rec-img {
+  transform: scale(1.2,1.2);
+}
 .song-rec-details img{
   display: block;
   height: 220px;
   height: 220px;
   margin: 0 10px;
+  transition: .5s;
 }
 .song-rec-details a {
   display: block;
@@ -170,6 +238,7 @@
 .song-rec-point div:hover {
   background: #999999;
 }
+
 /* 以下是新歌推荐版块 */
 .new-song {
   height: 600px;
@@ -241,16 +310,26 @@
   padding-top: 20px;
   margin: 0 35px 0 0;
 }
+.new-song-details-imgbox {
+  width: 90px;
+  height: 90px;
+  overflow: hidden;
+}
+.new-song-details-imgbox:hover .new-song-details-img {
+  transform: scale(1.2,1.2);
+}
 .new-song-details .active {
   border: none;
 }
 .new-song-details img {
   width: 90px;
   height: 90px;
+  transition: .5s;
 }
-.new-song-details div {
-  width: 280px;
-  height: 100px;   
+.new-song-details li {
+  width: 360px;
+  height: 100px;  
+  margin: 0 28px 0 12px; 
 }
 .new-song-details h3 {
   float: left;
@@ -258,6 +337,9 @@
   font-size: 14px;
   padding: 25px 0 0 15px;
   margin: 0;
+}
+.new-song-details-fontbox {
+  width: 270px;
 }
 .new-song-details .time {
   float: right;
@@ -290,7 +372,7 @@
 .new-song-point li:hover {
   background: #999999;
 }
-
+/* 精彩推荐 */
 .wonderful {
   height: 420px;
   background-image:linear-gradient(#f2f2f2 25%,#fafafa 75%);
@@ -300,7 +382,6 @@
   text-align: center;
   padding: 50px 0 30px 0;
   font-size: 30px;
-  letter-spacing: 10px;
 }
 .wonderful .image {
   display: flex;
@@ -324,6 +405,7 @@
 .wonderful-point {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
 }
 .wonderful-point li {
   background: #c9c9c9;
@@ -338,17 +420,419 @@
 .wonderful-point .active {
   background: #999999;
 }
-
+/* 新碟推荐 */
 .new-disc {
-  height: 770px;
-  background: #a16a6b;
+  height: 850px;
+  background-image: linear-gradient(#f2f2f2 25%,#fafafa 75%);
+}
+.new-disc h2 {
+  text-align: center;
+  margin: 0;
+  padding-top: 50px;
+}
+.new-disc-menu {
+  display: flex;
+  justify-content: center;
+}
+.new-disc-menu li {
+  margin: 20px 40px 0 0 ;
+}
+.new-disc-menu .active {
+  color: #3ac17e;
+}
+.new-disc-menu li:hover {
+  color: #3ac17e;
+}
+.new-disc-details {
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.new-disc-details li {
+  height: 310px;
+  width: 225px;
+  margin: 10px 5px 10px 10px;
+}
+.new-disc-imgbox {
+  height: 225px;
+  height: 225px;
+  overflow: hidden;
+}
+.new-disc-imgbox:hover .new-disc-img {
+  transform: scale(1.2,1.2);
+}
+.new-disc-details img {
+  height: 225px;
+  width: 225px;
+  cursor: pointer;
+  transition: .5s;
+}
+.new-disc-details h3 {
+  font-size: 14px;
+  margin: 15px 0 5px 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+.new-disc-details p {
+  font-size: 14px;
+  color: #777777;
+  margin: 0;
+  cursor: pointer;
+}
+.new-disc-details h3:hover,.new-disc-details p:hover {
+  color: #3ac17e;
+}
+/* 排行榜 */
+.ranking {
+  height: 650px;
+  background-image: linear-gradient(#f2f2f2 25%,#fafafa 75%);
+}
+.ranking h2 {
+  padding-top: 30px;
+}
+.ranking h2,.ranking h4,.ranking h3,.ranking h5 {
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+}
+.ranking-list h4 {
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 200;
+}
+.ranking-list h3 {
+  font-size: 26px;
+  margin-top: 5px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.ranking-list {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.ranking-list div {
+  width: 224px;
+  height: 500px;
+  color: white;
+  float: left;
+  background-image: url(../img/bg.jpg);
+  margin-left: 20px;
+  background-clip: padding-box;  
+}
+.ranking-list-div2 {  
+  background-position: -224px 0;
+}
+.ranking-list-div3 {  
+  background-position: -448px 0;
+}
+.ranking-list-div4 {  
+  background-position: -672px 0;
+}
+.ranking-list-div5 {  
+  background-position: -896px 0;
+}
+.ranking-list .line {
+  height: 2px;
+  width: 36px;
+  background: white;
+  margin: 35px 0 0 94px;
+}
+.ranking-list-content {
+  margin-top: 80px;
+  padding: 0;
+}
+.ranking-list-content li {
+  margin: 40px;
+}
+.ranking-list-content li p:nth-child(2) {
+  text-indent: 9px;
+}
+.ranking-list-content p{
+  color: white;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.ranking-list {
-  height: 668px;
-  background: #bb66bb;
-}
+/* MV */
 .mv {
-  height: 680px;
-  background: #b77d77;
+  height: 660px;
+  background-image: linear-gradient(#f2f2f2 25%,#fafafa 75%);
 }
+.mv h2 {
+  margin: 0;
+  text-align: center;
+  padding-top: 50px;
+}
+.mv-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.mv-menu li {
+  margin-right: 30px;
+}
+.mv-menu li:hover {
+  color: #3ac17e;
+}
+.mv-menu .active {
+  color: #3ac17e;
+}
+.mv-details {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+.mv-details li {
+  height: 220px;
+  width: 224px;
+  margin-right: 20px;
+}
+.mv-details-imgbox {
+  height: 128px;
+  width: 224px;
+  overflow: hidden;
+}
+.mv-details-imgbox:hover .mv-details-img {
+  transform: scale(1.2,1.2);
+}
+.mv-details img {
+  height: 128px;
+  width: 224px;
+  transition: .5s;
+}
+.mv-details p {
+  margin: 0;
+  font-size: 14px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.mv-details p:hover {
+  color: #3ac17e;
+}
+.mv-details .active:hover {
+  color: #777777;
+}
+.mv-details-p2 , .icon-MV {
+  color: #777777;
+}
+.mv-details-vv i{
+  float: left;
+  font-size: 22px;
+  margin: 6px 5px 0 0;
+}
+.mv-details-vv p{
+  float: left;
+  color: #777777;
+}
+.mv-details-point {
+  display: flex;
+  justify-content: center;
+}
+.mv-details-point li {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #c9c9c9;
+  cursor: pointer;
+  margin: 15px 40px 0 0;
+}
+.mv-details-point .active {
+  background: #999999;
+}
+.mv-details-point li:hover {
+  background: #999999;
+}
+/* 底部版块 */
+.footer {
+  height: 600px;
+  background: #333333;
+  color: #999999;
+}
+.footer-shang {
+  padding: 50px 25px 0 25px;
+  display: flex;
+}
+.footer-downlaod {
+  width: 430px;
+}
+.footer-downlaod-font {
+  margin: 0;
+  padding-left: 35px;
+}
+.footer-downlaod-list {
+  display: flex;
+  padding: 0;
+}
+.footer-downlaod-list li i {
+  background-image: url(../img/footer.png);
+  display: block;
+  width: 54px;
+  height: 50px;
+}
+.footer-downlaod-list li {
+  margin: 20px 0 0 35px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.footer-downlaod-list li p:hover {
+  color: #3ac17e;
+}
+.footer-downlaod-list .PC i {
+  background-position: -2px 0;
+}
+.footer-downlaod-list .PC i:hover {
+  background-position: -2px -49px;
+}
+.footer-downlaod-list .MAC i {
+  background-position: -88px 0;
+}
+.footer-downlaod-list .MAC i:hover {
+  background-position: -88px -49px;
+}
+.footer-downlaod-list .android i {
+  background-position: -172px 0;
+}
+.footer-downlaod-list .android i:hover {
+  background-position: -172px -49px;
+}
+.footer-downlaod-list .iphone i {
+  background-position: -262px 0;
+}
+.footer-downlaod-list .iphone i:hover {
+  background-position: -262px -49px;
+}
+
+.footer-product {
+  width: 450px;
+}
+.footer-product-font {
+  margin: 0;
+  padding-left: 35px;
+}
+.footer-product-list {
+  display: flex;
+}
+.footer-product-list li{
+  margin: 25px 0 0 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+.footer-product-list li:hover {
+  color: #3ac17e;
+}
+.footer-product-list .sing {
+  margin-right: 20px;
+}
+.footer-product-list .SS {
+  margin-right: 30px;
+}
+.footer-product-list .fan {
+  margin-left: -10px;
+}
+.footer-product-list i {
+  background-image: url(../img/footer.png);
+  display: block;
+  width: 80px;
+  height: 50px;
+  text-align: center;
+}
+.footer-product-list .sing i {
+  background-position: -366px 0;
+}
+.footer-product-list .sing i:hover {
+  background-position: -366px -49px;
+}
+.footer-product-list .SS i {
+  background-position: -446px 0;
+}
+.footer-product-list .SS i:hover {
+  background-position: -446px -49px;
+}
+.footer-product-list .Qplay i {
+  background-position: -560px 0;
+}
+.footer-product-list .Qplay i:hover {
+  background-position: -560px -49px;
+}
+.footer-product-list .fan i {
+  background-position: -625px 0;
+}
+.footer-product-list .fan i:hover {
+  background-position: -625px -49px;
+}
+
+.footer-coop {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-coop-font {
+  margin: 0;
+  padding-left: 35px;
+}
+.footer-coop li {
+  width: 110px;
+  margin: 20px 0 0 0;
+  cursor: pointer;
+  font-size: 14px;
+  cursor: pointer;
+}
+.footer-coop li:hover {
+  color: #3ac17e;
+}
+
+.footer-zhong {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.footer-zhong ul{
+  display: flex;
+  font-size: 14px;
+}
+.footer-zhong ul li {
+  margin-right: 150px;
+}
+.footer-zhong ul p {
+  margin: 0;
+  padding: 30px 40px 0 0;
+}
+.footer-zhong-content {
+  display: flex;
+}
+
+.footer-xia {
+  margin-top: 100px;
+}
+.footer-xia-list {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  margin-right: 30px;
+}
+.footer-xia-list li {
+  margin: 0 5px 0 5px;
+}
+.footer-xia-time {
+  display: flex;
+  margin: 20px 0 0 550px;
+  font-size: 12px;
+}
+.footer-xia-time p {
+  margin: 0 0 0 10px;
+}
+.footer-xia-cop {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+{
+  "id": "2256210",
+  "name": "QQ音乐",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3639916",
+      "name": "顶部",
+      "font_class": "top",
+      "unicode": "e6bc",
+      "unicode_decimal": 59068
+    },
+    {
+      "icon_id": "3748407",
+      "name": "扩展",
+      "font_class": "kuozhan",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "4752321",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e6af",
+      "unicode_decimal": 59055
+    },
+    {
+      "icon_id": "6629529",
+      "name": "MV",
+      "font_class": "MV",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "6654378",
+      "name": "顶部",
+      "font_class": "dingbu",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "17714615",
+      "name": "遮罩矩形",
+      "font_class": "zhezhaojuxing",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    }
+  ]
+}

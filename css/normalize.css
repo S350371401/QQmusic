@@ -356,4 +356,6 @@ a {
 }
 h2 {
   font-weight: normal;
+  letter-spacing: 10px;
+  font-size: 30px;
 }
